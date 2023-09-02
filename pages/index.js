@@ -10,7 +10,7 @@ import {
   ListItem,
   useColorModeValue,
   chakra,
-  Flex, // Import Flex
+  Center,
   Text
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
@@ -24,12 +24,7 @@ import Image from 'next/image'
 const Home = () => (
   <Layout>
     <Container maxW="container.xl" h="100vh">
-      <Box // Use Flex
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        h="100%"
-      >
+      <Center h="100%">
         <Section delay={0.1}>
           <Box display="flex" alignItems="end">
             <Image
@@ -61,7 +56,7 @@ const Home = () => (
             businesses and startups expand their capacity for impact 🚀.
           </Text>
         </Section>
-      </Box>
+      </Center>
     </Container>
   </Layout>
 )
