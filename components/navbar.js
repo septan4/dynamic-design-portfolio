@@ -78,16 +78,32 @@ const Navbar = props => {
           justify="flex-end"
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
+          <LinkItem
+            _hover={{ textDecoration: 'none', fontWeight: '700' }}
+            href="/works"
+            path={path}
+          >
             Works
           </LinkItem>
-          <LinkItem href="/about" path={path}>
+          <LinkItem
+            _hover={{ textDecoration: 'none', fontWeight: '700' }}
+            href="/about"
+            path={path}
+          >
             About
           </LinkItem>
-          <LinkItem href="/contact" path={path}>
+          <LinkItem
+            _hover={{ textDecoration: 'none', fontWeight: '700' }}
+            href="/contact"
+            path={path}
+          >
             Contact
           </LinkItem>
-          <LinkItem href="mailto:R.Z.Yousefpour@gmail.com" target="_blank">
+          <LinkItem
+            _hover={{ textDecoration: 'none', fontWeight: '700' }}
+            href="mailto:R.Z.Yousefpour@gmail.com"
+            target="_blank"
+          >
             R.Z.Yousefpour@gmail.com
           </LinkItem>
         </Stack>
