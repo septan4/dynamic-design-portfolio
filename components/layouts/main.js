@@ -28,7 +28,7 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.xl" pt={[10, 0]}>
+      <Container maxW="container.xl">
         {children}
 
         <Footer />

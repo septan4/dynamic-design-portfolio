@@ -30,7 +30,7 @@ import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 
 const Home = () => (
   <Layout>
-    <Container maxW="container.xl" h={['832px', '95vh']}>
+    <Container maxW="container.xl" h={['832px', '900px']} pt={[10, 0]}>
       <Center h="100%">
         <Section delay={0.1}>
           <Box display="flex" alignItems="center" flexDirection="column">
@@ -94,7 +94,7 @@ const Home = () => (
                     fontFamily="Exo Variable, sans-serif"
                     fontWeight="600"
                     fontStyle="normal"
-                    mt="30px"
+                    mt="20px"
                   >
                     Works
                   </Box>
@@ -120,7 +120,7 @@ const Home = () => (
                     fontFamily="Exo Variable, sans-serif"
                     fontWeight="600"
                     fontStyle="normal"
-                    mt="30px"
+                    mt="20px"
                   >
                     Resume
                   </Box>
@@ -146,7 +146,7 @@ const Home = () => (
                     fontFamily="Exo Variable, sans-serif"
                     fontWeight="600"
                     fontStyle="normal"
-                    mt="30px"
+                    mt="20px"
                   >
                     Bio
                   </Box>
@@ -176,7 +176,7 @@ const Home = () => (
                     fontFamily="Exo Variable, sans-serif"
                     fontWeight="600"
                     fontStyle="normal"
-                    mt="30px"
+                    mt="20px"
                   >
                     Contact
                   </Box>
