@@ -15,6 +15,18 @@ const Footer = () => {
       >
         Developed by Sepehr{' '}
       </Link>
+      <br />
+      Characters are from{' '}
+      <Link
+        as={NextLink}
+        href="https://www.bitmoji.com/"
+        passHref
+        scroll={false}
+        target="_blank"
+        ml="1"
+      >
+        Bitmojy.com
+      </Link>
     </Box>
   )
 }

@@ -5,8 +5,14 @@ import { Box, Container } from '@chakra-ui/react'
 import Footer from '../footer'
 
 const Main = ({ children, router }) => {
+  // const handleContextMenu = e => {
+  //   e.preventDefault()
+  // }
   return (
-    <Box as="main" pb={8}>
+    <Box
+      as="main"
+      pb={8} /*onContextMenu={handleContextMenu} draggable="false"*/
+    >
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Takuya's homepage" />
@@ -28,7 +34,7 @@ const Main = ({ children, router }) => {
 
       <NavBar path={router.asPath} />
 
-      <Container maxW="container.xl">
+      <Container maxW="100%">
         {children}
 
         <Footer />
