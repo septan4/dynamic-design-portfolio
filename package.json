@@ -21,13 +21,11 @@
     "@fontsource/inspiration": "^5.0.11",
     "@fontsource/italiana": "^5.0.11",
     "framer-motion": "^8.4.0",
-    "graphql": "^16.8.0",
     "graphql-request": "^6.1.0",
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
-    "three": "^0.148.0"
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "eslint": "^8.31.0",
