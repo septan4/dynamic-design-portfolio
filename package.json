@@ -15,6 +15,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.15",
     "@chakra-ui/react": "^2.4.6",
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource-variable/exo": "^5.0.9",
@@ -25,6 +26,7 @@
     "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.46.1",
     "react-icons": "^4.7.1"
   },
   "devDependencies": {

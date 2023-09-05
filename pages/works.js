@@ -82,21 +82,21 @@ const Works = ({ posts }) => {
             fontFamily="Exo Variable, sans-serif"
           >
             <Tab
-              fontSize={{ base: '10px', md: '20px', lg: '32px' }}
+              fontSize={{ base: '13px', md: '20px', lg: '32px' }}
               _selected={{ fontWeight: '600', color: '#2d2d2d' }}
               color="#C2C2C2"
             >
               Case Study{' '}
             </Tab>
             <Tab
-              fontSize={{ base: '10px', md: '20px', lg: '32px' }}
+              fontSize={{ base: '13px', md: '20px', lg: '32px' }}
               _selected={{ fontWeight: '600', color: '#2d2d2d' }}
               color="#C2C2C2"
             >
               Branding & Visual
             </Tab>
             <Tab
-              fontSize={{ base: '10px', md: '20px', lg: '32px' }}
+              fontSize={{ base: '13px', md: '20px', lg: '32px' }}
               _selected={{ fontWeight: '600', color: '#2d2d2d' }}
               color="#C2C2C2"
             >
@@ -107,7 +107,11 @@ const Works = ({ posts }) => {
             <TabPanel>
               {' '}
               <Section delay={0.1}>
-                <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                <SimpleGrid
+                  columns={{ base: '1', xl: '2' }}
+                  justifyItems="center"
+                  gap={6}
+                >
                   {posts.map(post => (
                     <WorkGridItem
                       slug={post.slug}
@@ -129,7 +133,11 @@ const Works = ({ posts }) => {
             <TabPanel>
               {' '}
               <Section delay={0.1}>
-                <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                <SimpleGrid
+                  columns={{ base: '1', xl: '2' }}
+                  justifyItems="center"
+                  gap={6}
+                >
                   {posts.map(post => (
                     <WorkGridItem
                       slug={post.slug}
@@ -150,7 +158,11 @@ const Works = ({ posts }) => {
             </TabPanel>
             <TabPanel>
               <Section delay={0.1}>
-                <SimpleGrid columns={[1, 1, 2]} gap={6}>
+                <SimpleGrid
+                  columns={{ base: '1', xl: '2' }}
+                  justifyItems="center"
+                  gap={6}
+                >
                   {posts.map(post => (
                     <WorkGridItem
                       slug={post.slug}

@@ -68,10 +68,10 @@ const Home = () => {
                 textTransform="capitalize"
                 tex
               >
-                I&apos;m a UX/UI & Product Designer with +3 years experience. B
-                ased in Istanbul. conceptualizing and crafting digital products,
-                helping businesses and startups expand their capacity for impact
-                🚀.
+                I&apos;m a UX/UI & Product Designer with +3 years experience.
+                Based in Istanbul. conceptualizing and crafting digital
+                products, helping businesses and startups expand their capacity
+                for impact 🚀.
               </Text>
               <SimpleGrid
                 columns={[2, 2, 4]}
