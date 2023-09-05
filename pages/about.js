@@ -1,6 +1,5 @@
 import {
   Container,
-  Heading,
   SimpleGrid,
   Text,
   Box,

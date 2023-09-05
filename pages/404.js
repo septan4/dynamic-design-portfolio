@@ -1,12 +1,5 @@
 import NextLink from 'next/link'
-import {
-  Box,
-  Heading,
-  Text,
-  Container,
-  Divider,
-  Button
-} from '@chakra-ui/react'
+import { Box, Text, Container, Divider, Button } from '@chakra-ui/react'
 import Image from 'next/image'
 import notfound from '../public/images/notfound.png'
 import '@fontsource-variable/exo'

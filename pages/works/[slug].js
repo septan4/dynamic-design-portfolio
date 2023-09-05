@@ -1,22 +1,8 @@
-import {
-  Container,
-  Badge,
-  Link,
-  List,
-  ListItem,
-  SimpleGrid,
-  UnorderedList,
-  Heading,
-  Center,
-  Box,
-  Text
-} from '@chakra-ui/react'
+import { Container, Box, Text } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
-import { ExternalLinkIcon } from '@chakra-ui/icons'
-import { Title, WorkImage, Meta } from '../../components/work'
-import P from '../../components/paragraph'
+
 import { GraphQLClient, gql } from 'graphql-request'
-import Image from 'next/image'
+
 import '@fontsource-variable/exo'
 
 const graphcms = new GraphQLClient(

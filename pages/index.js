@@ -23,10 +23,6 @@ import RESUME from '../public/images/resume.png'
 import CONTACT from '../public/images/contact.png'
 
 import Image from 'next/image'
-import { WorkGridItem } from '../components/grid-item'
-import thumbPichu2 from '../public/images/works/pichu2_eyecatch.png'
-import thumbFreeDBTagger from '../public/images/works/freedbtagger_eyecatch.png'
-import thumbAmembo from '../public/images/works/amembo_eyecatch.png'
 
 const Home = () => {
   const handleContextMenu = e => {

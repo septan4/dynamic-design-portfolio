@@ -1,9 +1,7 @@
 import React from 'react'
 import {
   Container,
-  Heading,
   SimpleGrid,
-  Divider,
   Tab,
   Tabs,
   TabList,
