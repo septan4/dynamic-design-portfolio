@@ -5,10 +5,6 @@ import {
   Heading,
   Box,
   SimpleGrid,
-  Button,
-  List,
-  ListItem,
-  chakra,
   Center,
   Text
 } from '@chakra-ui/react'
