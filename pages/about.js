@@ -5,7 +5,8 @@ import {
   Text,
   Box,
   Button,
-  TagLeftIcon
+  TagLeftIcon,
+  useMediaQuery
 } from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
@@ -14,6 +15,7 @@ import '@fontsource-variable/exo'
 
 import PROBLEM from '../public/images/problem.png'
 import ROADMAP from '../public/images/roadmap1.png'
+import ROADMAP1 from '../public/images/roadmap.png'
 
 import Image from 'next/image'
 
@@ -21,6 +23,9 @@ const About = () => {
   const handleContextMenu = e => {
     e.preventDefault()
   }
+
+  const [isLargerThan768] = useMediaQuery('(min-width: 768px)')
+  const [isSmallerThan768] = useMediaQuery('(max-width: 767px)')
   return (
     <Layout title="About" onContextMenu={handleContextMenu} draggable="false">
       <Container pt="120px" maxW="container.xl">
@@ -30,11 +35,19 @@ const About = () => {
               <Text fontSize="16px" fontWeight="600" textTransform="capitalize">
                 Nice to have you here!{' '}
               </Text>
-              <Text fontSize="32px" fontWeight="600">
+              <Text
+                fontSize={{ base: '20px', md: '25px', lg: '32px' }}
+                fontWeight="600"
+              >
                 I’m zara
                 <br /> an UI/UX designer based in{' '}
               </Text>
-              <Text fontSize="16px" fontWeight="600" textTransform="capitalize">
+              <Text
+                fontSize="16px"
+                fontWeight="600"
+                textTransform="capitalize"
+                mt="10px"
+              >
                 📍Istanbul.{' '}
               </Text>
               <Text fontSize="16px" mt="32px">
@@ -61,15 +74,16 @@ const About = () => {
               flexDirection="column"
               justifyContent="center"
               alignItems="center"
-              className="Image"
             >
-              <Image
-                src={PROBLEM}
-                width="244"
-                height="244"
-                onContextMenu={handleContextMenu}
-                draggable="false"
-              />
+              {isLargerThan768 && (
+                <Image
+                  src={PROBLEM}
+                  width="244"
+                  height="244"
+                  onContextMenu={handleContextMenu}
+                  draggable="false"
+                />
+              )}
               <Text fontSize="16px" fontWeight="600" textTransform="capitalize">
                 Want a copy of my resume?{' '}
               </Text>
@@ -79,32 +93,63 @@ const About = () => {
                 height="64px"
                 px="38px"
                 py="16px"
-                colorScheme="#000"
-                variant="outline"
+                bg="#009379"
+                color="#ffffff"
+                variant="solid"
                 borderRadius="20px"
+                _hover={{
+                  color: '#000',
+                  border: '1px solid',
+                  bg: 'none',
+                  borderColor: 'black'
+                }}
               >
                 <TagLeftIcon boxSize="32px" as={AiOutlineDownload} /> Download
               </Button>
             </Box>
           </SimpleGrid>
-          <Box h="max-content" w="100%" bg="white" py="10" mt="50">
-            <Text
-              fontWeight="600"
-              align="center"
-              fontFamily="Exo Variable, sans-serif"
-              color="#2d2d2d"
-              fontSize="32px"
-              mb="40px"
-            >
-              My work Roadmap
-            </Text>
-            <Image
-              src={ROADMAP}
-              alt="roadmap"
-              onContextMenu={handleContextMenu}
-              draggable="false"
-            />
-          </Box>
+          {isLargerThan768 && (
+            <Box h="max-content" w="100%" bg="white" py="10" mt="50">
+              <Text
+                fontWeight="600"
+                align="center"
+                fontFamily="Exo Variable, sans-serif"
+                color="#2d2d2d"
+                fontSize="32px"
+                mb="40px"
+              >
+                My work Roadmap
+              </Text>
+
+              <Image
+                src={ROADMAP}
+                alt="roadmap"
+                onContextMenu={handleContextMenu}
+                draggable="false"
+              />
+            </Box>
+          )}
+          {isSmallerThan768 && (
+            <Box h="max-content" w="100%" py="10" mt="50">
+              <Text
+                fontWeight="600"
+                align="center"
+                fontFamily="Exo Variable, sans-serif"
+                color="#2d2d2d"
+                fontSize="32px"
+                mb="40px"
+              >
+                My work Roadmap
+              </Text>
+
+              <Image
+                src={ROADMAP1}
+                alt="roadmap"
+                onContextMenu={handleContextMenu}
+                draggable="false"
+              />
+            </Box>
+          )}
         </Section>
       </Container>
     </Layout>

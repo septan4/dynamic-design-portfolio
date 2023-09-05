@@ -2,45 +2,58 @@ import NextLink from 'next/link'
 import Image from 'next/image'
 import { Box, Text, LinkBox, LinkOverlay } from '@chakra-ui/react'
 import { Global } from '@emotion/react'
+import '@fontsource-variable/exo'
 
-export const GridItem = ({ children, href, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
-    <LinkBox cursor="pointer">
-      <Image
-        src={thumbnail}
-        alt={title}
-        className="grid-item-thumbnail"
-        placeholder="blur"
-        loading="lazy"
-      />
-      <LinkOverlay href={href} target="_blank">
-        <Text mt={2}>{title}</Text>
-      </LinkOverlay>
-      <Text fontSize={14}>{children}</Text>
-    </LinkBox>
-  </Box>
-)
-
-export const WorkGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
+export const WorkGridItem = ({
+  children,
+  slug,
+  title,
+  subTitle,
+  thumbnail,
+  categury,
+  bGColor,
+  titleColor,
+  textColor
+}) => (
+  <Box
+    w="468px"
+    h="225px"
+    borderRadius="26px"
+    textAlign="start"
+    bg={bGColor}
+    fontFamily="Exo Variable, sans-serif"
+  >
     <LinkBox
       as={NextLink}
-      href={`/works/${id}`}
+      href={`/works/` + slug}
       scroll={false}
       cursor="pointer"
+      display="flex"
+      flexDirection="row"
     >
       <Image
         src={thumbnail}
         alt={title}
+        width="225"
+        height="225"
         className="grid-item-thumbnail"
-        placeholder="blur"
       />
-      <LinkOverlay as="div" href={`/works/${id}`}>
-        <Text mt={2} fontSize={20}>
-          {title}
+      <Box display="flex" flexDirection="column" ml="20px" mt="5px" mr="20px">
+        <LinkOverlay as="div" href={`/works/` + slug}>
+          <Text mt={2} fontSize={22} fontWeight={700} color={titleColor}>
+            {title}
+          </Text>
+          <Text mt={2} fontSize={11} fontWeight={600} color={titleColor}>
+            {subTitle}
+          </Text>
+        </LinkOverlay>
+        <Text mt={5} fontSize={15} lineHeight={'18px'} color={textColor}>
+          {children}
         </Text>
-      </LinkOverlay>
-      <Text fontSize={14}>{children}</Text>
+        <Text mt={5} fontSize={9} fontWeight={400} color={titleColor}>
+          {categury}
+        </Text>
+      </Box>
     </LinkBox>
   </Box>
 )
@@ -49,7 +62,7 @@ export const GridItemStyle = () => (
   <Global
     styles={`
       .grid-item-thumbnail {
-        border-radius: 12px;
+        border-radius: 26px;
       }
     `}
   />
