@@ -135,8 +135,8 @@ const Works = ({ posts }) => {
               <Section delay={0.1}>
                 <SimpleGrid
                   columns={{ base: '1', xl: '2' }}
-                  justifyItems="center"
                   gap={6}
+                  justifyContent="center"
                 >
                   {posts.map(post => (
                     <WorkGridItem

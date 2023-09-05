@@ -70,41 +70,48 @@ export async function getStaticPaths() {
   }
 }
 
-const Work = ({ post }) => (
-  <Layout title={post.title}>
-    <Container
-      maxW="container.md"
-      pt={{ base: '100px', md: '150px' }}
-      pb="50px"
-    >
-      <Box fontFamily="Exo Variable, sans-serif">
-        <Box
-          ml={{ base: 'none', md: '65px' }}
-          width={{ base: 'none', md: '80%' }}
-        >
-          <Text
-            fontSize={{ base: '32px', md: '42px', lg: '50px' }}
-            fontWeight="700"
+const Work = ({ post }) => {
+  const handleContextMenu = e => {
+    e.preventDefault()
+  }
+  return (
+    <Layout title={post.title}>
+      <Container
+        maxW="container.md"
+        pt={{ base: '100px', md: '150px' }}
+        pb="50px"
+        onContextMenu={handleContextMenu}
+        draggable="false"
+      >
+        <Box fontFamily="Exo Variable, sans-serif">
+          <Box
+            ml={{ base: 'none', md: '65px' }}
+            width={{ base: 'none', md: '80%' }}
           >
-            {' '}
-            {post.title}{' '}
-          </Text>
-          <Text mt="34px" textColor="#000" fontSize="16px">
-            {' '}
-            {post.categury}{' '}
-          </Text>
-          <Text mt="23px" fontSize={{ base: '18px ', md: '24px' }}>
-            {' '}
-            {post.text.text}{' '}
-          </Text>{' '}
+            <Text
+              fontSize={{ base: '32px', md: '42px', lg: '50px' }}
+              fontWeight="700"
+            >
+              {' '}
+              {post.title}{' '}
+            </Text>
+            <Text mt="34px" textColor="#000" fontSize="16px">
+              {' '}
+              {post.categury}{' '}
+            </Text>
+            <Text mt="23px" fontSize={{ base: '18px ', md: '24px' }}>
+              {' '}
+              {post.text.text}{' '}
+            </Text>{' '}
+          </Box>
+          <Box
+            dangerouslySetInnerHTML={{ __html: post.content.html }}
+            mt={{ base: '45px', md: '90px' }}
+          ></Box>
         </Box>
-        <Box
-          dangerouslySetInnerHTML={{ __html: post.content.html }}
-          mt={{ base: '45px', md: '90px' }}
-        ></Box>
-      </Box>
-    </Container>
-  </Layout>
-)
+      </Container>
+    </Layout>
+  )
+}
 
 export default Work
