@@ -136,7 +136,7 @@ const Works = ({ posts }) => {
                 <SimpleGrid
                   columns={{ base: '1', xl: '2' }}
                   gap={6}
-                  justifyContent="center"
+                  justifyItems="center"
                 >
                   {posts.map(post => (
                     <WorkGridItem
