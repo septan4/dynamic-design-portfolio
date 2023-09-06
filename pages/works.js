@@ -82,21 +82,21 @@ const Works = ({ posts }) => {
             fontFamily="Exo Variable, sans-serif"
           >
             <Tab
-              fontSize={{ base: '13px', md: '20px', lg: '32px' }}
+              fontSize={{ base: '15px', md: '20px', lg: '32px' }}
               _selected={{ fontWeight: '600', color: '#2d2d2d' }}
               color="#C2C2C2"
             >
               Case Study{' '}
             </Tab>
             <Tab
-              fontSize={{ base: '13px', md: '20px', lg: '32px' }}
+              fontSize={{ base: '15px', md: '20px', lg: '32px' }}
               _selected={{ fontWeight: '600', color: '#2d2d2d' }}
               color="#C2C2C2"
             >
               Branding & Visual
             </Tab>
             <Tab
-              fontSize={{ base: '13px', md: '20px', lg: '32px' }}
+              fontSize={{ base: '15px', md: '20px', lg: '32px' }}
               _selected={{ fontWeight: '600', color: '#2d2d2d' }}
               color="#C2C2C2"
             >
