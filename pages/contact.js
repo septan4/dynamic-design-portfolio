@@ -46,7 +46,7 @@ const Contact = () => {
       )
   }
   return (
-    <Layout title="About">
+    <Layout title="Contact">
       <Container
         maxW={{ base: 'container.md', xl: 'container.lg' }}
         pt={{ base: '100px', lg: '150px' }}
