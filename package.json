@@ -10,7 +10,7 @@
     "lint": "next lint"
   },
   "keywords": [],
-  "author": "Takuya Matsuyama",
+  "author": "Sepehr Tanhaei",
   "license": "MIT",
   "dependencies": {
     "@apollo/client": "^3.8.3",
