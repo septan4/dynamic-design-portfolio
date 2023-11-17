@@ -30,7 +30,7 @@ To run this project locally, follow these steps:
 2. Install dependencies:
 
 ```bash
-cd neumorphisem-portfolio
+cd dynamic-design-portfolio
 npm install
 ```
 
